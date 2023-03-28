@@ -8,17 +8,6 @@ $(function(){
     $("#logs").append('<table class="table">');
     var isDraggable = true;
     var isResizable = true;
-
-    // var cy = window.cy = cytoscape({
-    //     container: document.getElementById('cy'),
-    //     elements: fetch('./demo.json').then(function (res) {
-    //       return res.json();
-    //     }),
-    //     userZoomingEnabled: false,
-    //     layout: { name: 'preset' },
-    //     style: sbgnStylesheet(cytoscape)
-    //   });
-
     var $sc = $("#schedule").timeSchedule({
         startTime: "07:30", // schedule start time(HH:ii)
         endTime: "20:00",   // schedule end time(HH:ii)
@@ -29,7 +18,7 @@ $(function(){
         bundleMoveWidth: 6,  // width to move all schedules to the right of the clicked time line cell
         draggable: isDraggable,
         resizable: false,
-        resizableLeft: true,
+        resizableLeft: false,
         rows : {
             '0' : {
                 title : 'ИТМО',
